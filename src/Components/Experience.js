@@ -1,6 +1,10 @@
+import { StyledPage, StyledHeader} from "./Styles";
+
 const Experience = () => {
     return (
-        <div></div>
+        <StyledPage>
+            <StyledHeader>Experience</StyledHeader>
+        </StyledPage>
     )
 }
 

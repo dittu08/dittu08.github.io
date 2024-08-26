@@ -1,6 +1,11 @@
+import styled from "styled-components";
+import { StyledPage, StyledHeader} from "./Styles";
+
 const Projects = () => {
     return (
-        <div></div>
+        <StyledPage>
+            <StyledHeader>Projects</StyledHeader>
+        </StyledPage>
     )
 }
 

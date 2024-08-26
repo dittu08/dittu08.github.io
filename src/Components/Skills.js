@@ -1,6 +1,10 @@
+import { StyledPage, StyledHeader} from "./Styles";
+
 const Skills = () => {
     return (
-        <div></div>
+        <StyledPage>
+            <StyledHeader>Skills</StyledHeader>
+        </StyledPage>
     )
 }
 
