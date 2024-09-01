@@ -8,7 +8,7 @@ const Home = () => {
     const el = useRef(null);
     useEffect(() => {
         const typed = new Typed(el.current, {
-            strings: ["Full Stack Developer"],
+            strings: ["."],
             typeSpeed: 50,
             loop: true,
             loopCount: Infinity,
@@ -52,8 +52,11 @@ const Home = () => {
     )
 }
 
+// 576 768 992 1200 1400
+
 const StyledHome = styled.div`
     display: flex;
+    flex-direction: row;
     margin: auto;
     /* border: 1px solid orange; */
     height: 700px;
@@ -61,8 +64,8 @@ const StyledHome = styled.div`
     padding: 50px;
     box-sizing: border-box;
 `
+
 const StyledHomePic = styled.img`
-    border: 1px solid;
     margin: auto;
     width: 300px;
     height: 400px;
