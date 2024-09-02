@@ -25,9 +25,9 @@ export default Projects;
 const ProjBox = styled.div`
     border: 1px solid;
     display: flex;
+    width: 20rem;
 `
 const ProjLogo = styled.div`
     border: 1px solid;
-    min-width: 130px;
-    max-width: 150px;
+    width: 7rem;
 `

@@ -1,16 +1,19 @@
 import styled from "styled-components"
 
 export const StyledPage = styled.div`
-    margin: auto;
+    display: flex;
+    flex-direction: column;
     /* border: 1px solid orange; */
-    height: 700px;
-    max-width: 1140px;
-    padding: 50px;
+    width: 100%;
     box-sizing: border-box;
+    align-items: center;
+    padding: 0 3rem;
 `
 export const StyledHeader = styled.h1`
-    border-left: 5px solid black;
-    height: fit-content;
-    padding-left: 10px;
-    text-align: start;
+    align-self: flex-start;
+    &::before {
+        content: "|";
+        margin-right: 0.5rem;
+        font-weight: bold;
+    }
 `

@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import Typed from "typed.js";
 import styled from "styled-components";
+import { StyledPage } from "./Styles";
 import { FaGithub } from "react-icons/fa";
 import { RiNotionFill } from "react-icons/ri";
 
@@ -8,7 +9,7 @@ const Home = () => {
     const el = useRef(null);
     useEffect(() => {
         const typed = new Typed(el.current, {
-            strings: ["Full Stack Developerd"],
+            strings: ["Full-Stack Developer"],
             typeSpeed: 50,
             loop: true,
             loopCount: Infinity,
@@ -19,7 +20,7 @@ const Home = () => {
         };
     }, []);
     return (
-        <StyledHome>
+        <StyledPage>
             <StyledHello>
                 <h1>
                     {" "}
@@ -39,7 +40,7 @@ const Home = () => {
                 </StyledHomeUl>
                 <p>blah blah blah</p>
                 <StyledHomeStacks>
-                    <h2>Links</h2>
+                    <h2>Stacks</h2>
                     <StyledHomeA href="https://github.com/dittu08/dittu08" target="_blank" rel="noopener noreferrer">
                         <FaGithub />
                     </StyledHomeA>
@@ -48,20 +49,12 @@ const Home = () => {
                     </StyledHomeA>
                 </StyledHomeStacks>
             </StyledPrsnInfo>
-        </StyledHome>
+        </StyledPage>
     )
 }
 
 // 576 768 992 1200 1400
 
-const StyledHome = styled.div`
-    display: flex;
-    flex-direction: column;
-    border: 1px solid orange;
-    max-width: 100%;
-    box-sizing: border-box;
-    align-items: center;
-`
 const StyledHomePicBox = styled.div`
     width: 20rem;
     height: 15rem;
@@ -84,17 +77,17 @@ const StyledSpan = styled.span`
     white-space: nowrap;
 `
 const StyledPrsnInfo = styled.div`
-    border: 1px solid cyan;
+    /* border: 1px solid cyan; */
     text-align: start;
     width: 20rem;
 `
 const StyledHomeUl = styled.ul`
-    border: 1px solid magenta;
+    /* border: 1px solid magenta; */
     list-style: none;
     padding: 0;
 `
 const StyledHomeStacks = styled.div`
-    border: 1px solid magenta;
+    /* border: 1px solid magenta; */
 `
 const StyledHomeA = styled.a`
     color: black;
