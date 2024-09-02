@@ -8,7 +8,7 @@ const Home = () => {
     const el = useRef(null);
     useEffect(() => {
         const typed = new Typed(el.current, {
-            strings: ["."],
+            strings: ["Full Stack Developerd"],
             typeSpeed: 50,
             loop: true,
             loopCount: Infinity,
@@ -20,34 +20,34 @@ const Home = () => {
     }, []);
     return (
         <StyledHome>
-            <StyledHomePic alt="temp pic" src="img/temppic.jpg" />
-            <StyledHomeInfo>
-                <StyledHello>
-                    <h1>
-                        {" "}
-                        Hello, I'm a <StyledSpan ref={el} />{" "}
-                    </h1>
-                </StyledHello>
-                <StyledPerInfo>
-                    <p>blah blah blah</p>
-                    <h2>Personal Information</h2>
-                    <StyledHomeUl>
-                        <li>Name: </li>
-                        <li>Age: </li>
-                        <li>Phone: </li>
-                        <li>Email: </li>
-                    </StyledHomeUl>
-                    <StyledHomeStacks>
-                        <h3>Links</h3>
-                        <StyledHomeA href="https://github.com/dittu08/dittu08" target="_blank" rel="noopener noreferrer">
-                            <FaGithub />
-                        </StyledHomeA>
-                        <StyledHomeA href="https://www.notion.so/hcy0819/React-Node-js-4-_B-d2cfe87178e2430a80d6f72ea2ac10b7?pvs=4" target="_blank" rel="noopener noreferrer">
-                            <RiNotionFill />
-                        </StyledHomeA>
-                    </StyledHomeStacks>
-                </StyledPerInfo>
-            </StyledHomeInfo>
+            <StyledHello>
+                <h1>
+                    {" "}
+                    Hello, I'm a <br /><StyledSpan ref={el} />{" "}
+                </h1>
+            </StyledHello>
+            <StyledHomePicBox>
+                <StyledHomePic alt="temp pic" src="img/temppic.jpg" />
+            </StyledHomePicBox>
+            <StyledPrsnInfo>
+                <h2>Personal Information</h2>
+                <StyledHomeUl>
+                    <li>Name: </li>
+                    <li>Age: </li>
+                    <li>Phone: </li>
+                    <li>Email: </li>
+                </StyledHomeUl>
+                <p>blah blah blah</p>
+                <StyledHomeStacks>
+                    <h2>Links</h2>
+                    <StyledHomeA href="https://github.com/dittu08/dittu08" target="_blank" rel="noopener noreferrer">
+                        <FaGithub />
+                    </StyledHomeA>
+                    <StyledHomeA href="https://www.notion.so/hcy0819/React-Node-js-4-_B-d2cfe87178e2430a80d6f72ea2ac10b7?pvs=4" target="_blank" rel="noopener noreferrer">
+                        <RiNotionFill />
+                    </StyledHomeA>
+                </StyledHomeStacks>
+            </StyledPrsnInfo>
         </StyledHome>
     )
 }
@@ -56,48 +56,50 @@ const Home = () => {
 
 const StyledHome = styled.div`
     display: flex;
-    flex-direction: row;
-    margin: auto;
-    /* border: 1px solid orange; */
-    height: 700px;
-    max-width: 1140px;
-    padding: 50px;
+    flex-direction: column;
+    border: 1px solid orange;
+    max-width: 100%;
     box-sizing: border-box;
+    align-items: center;
 `
-
+const StyledHomePicBox = styled.div`
+    width: 20rem;
+    height: 15rem;
+    overflow: hidden;
+`
 const StyledHomePic = styled.img`
-    margin: auto;
-    width: 300px;
-    height: 400px;
-`
-const StyledHomeInfo = styled.div`
-    margin: auto;
-    width: 600px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 `
 const StyledHello = styled.div`
     /* border: 1px solid magenta; */
-    margin: 30px;
     text-align: start;
+    width: 20rem;
 `
 const StyledSpan = styled.span`
     color: orange;
+    overflow: visible;
+    white-space: nowrap;
 `
-const StyledPerInfo = styled.div`
-    /* border: 1px solid cyan; */
-    margin: 30px;
+const StyledPrsnInfo = styled.div`
+    border: 1px solid cyan;
     text-align: start;
+    width: 20rem;
 `
 const StyledHomeUl = styled.ul`
+    border: 1px solid magenta;
     list-style: none;
-    padding: 10px;
+    padding: 0;
 `
 const StyledHomeStacks = styled.div`
+    border: 1px solid magenta;
 `
 const StyledHomeA = styled.a`
     color: black;
-    font-size: 30px;
+    font-size: 2rem;
     text-decoration: none;
-    padding: 10px;
 `
 
 export default Home;
