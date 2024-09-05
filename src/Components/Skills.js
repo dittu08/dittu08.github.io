@@ -1,4 +1,4 @@
-import { StyledPage, StyledHeader} from "./Styles";
+import { StyledPage, StyledHeader} from "./Styled";
 
 const Skills = () => {
     return (

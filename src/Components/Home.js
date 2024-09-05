@@ -1,15 +1,15 @@
 import { useEffect, useRef } from "react";
 import Typed from "typed.js";
 import styled from "styled-components";
-import { StyledPage } from "./Styles";
+import { StyledPage } from "./Styled";
 import { FaGithub } from "react-icons/fa";
 import { RiNotionFill } from "react-icons/ri";
 
-const Home = () => {
+const TypedJs = ({ strings }) => {
     const el = useRef(null);
     useEffect(() => {
         const typed = new Typed(el.current, {
-            strings: ["Full-Stack Developer"],
+            strings: strings,
             typeSpeed: 50,
             loop: true,
             loopCount: Infinity,
@@ -18,13 +18,24 @@ const Home = () => {
         return () => {
             typed.destroy();
         };
-    }, []);
+    }, [strings]);
+    return <StyledSpan ref={el} />
+}
+
+const ProfileLink = ({ href, children }) => {
+    <StyledHomeLink href={href} target="_blank" rel="noopener noreferrer">
+        {children}
+    </StyledHomeLink>
+}
+
+const Home = () => {
     return (
         <StyledPage>
             <StyledHello>
                 <h1>
                     {" "}
-                    Hello, I'm a <br /><StyledSpan ref={el} />{" "}
+                    Hello, I'm a <br />
+                    <TypedJs strings={["Full-Stack Developer", "Front-End Developer", "Hwang Chae Yeon"]} />{" "}
                 </h1>
             </StyledHello>
             <StyledHomePicBox>
@@ -41,12 +52,12 @@ const Home = () => {
                 <p>blah blah blah</p>
                 <StyledHomeStacks>
                     <h2>Stacks</h2>
-                    <StyledHomeA href="https://github.com/dittu08/dittu08" target="_blank" rel="noopener noreferrer">
+                    <ProfileLink href={"https://github.com/dittu08/dittu08"}>
                         <FaGithub />
-                    </StyledHomeA>
-                    <StyledHomeA href="https://www.notion.so/hcy0819/React-Node-js-4-_B-d2cfe87178e2430a80d6f72ea2ac10b7?pvs=4" target="_blank" rel="noopener noreferrer">
+                    </ProfileLink>
+                    <ProfileLink href={"https://www.notion.so/hcy0819/React-Node-js-4-_B-d2cfe87178e2430a80d6f72ea2ac10b7?pvs=4"}>
                         <RiNotionFill />
-                    </StyledHomeA>
+                    </ProfileLink>
                 </StyledHomeStacks>
             </StyledPrsnInfo>
         </StyledPage>
@@ -89,7 +100,7 @@ const StyledHomeUl = styled.ul`
 const StyledHomeStacks = styled.div`
     /* border: 1px solid magenta; */
 `
-const StyledHomeA = styled.a`
+const StyledHomeLink = styled.a`
     color: black;
     font-size: 2rem;
     text-decoration: none;

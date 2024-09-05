@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const StyledPage = styled.div`
     display: flex;
     flex-direction: column;
-    /* border: 1px solid orange; */
+    border: 1px solid orange;
     width: 100%;
     box-sizing: border-box;
     align-items: center;
