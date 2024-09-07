@@ -6,6 +6,7 @@ const Projects = () => {
         <StyledPage>
             <StyledHeader>Projects</StyledHeader>
             <ProjBox>
+                {/* 내용 배열로 만들기 */}
                 <ProjLogo>
                     logo
                 </ProjLogo>

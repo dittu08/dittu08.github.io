@@ -19,12 +19,14 @@ const ProjDetail = () => {
                 <ProjInfo>participants</ProjInfo>
                 <ProjInfo>progress</ProjInfo>
             </ProjInfos>
-            <div>description</div>
-            <div>
-                <h3>page title</h3>
-                <p>image</p>
-                <p>page description</p>
-            </div>
+            <ProjDesc>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu tortor odio. Morbi iaculis ligula vel accumsan lobortis. Sed felis metus, sagittis accumsan viverra in, elementum vel urna. Nullam non nunc vestibulum, dapibus sem vitae, viverra dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</ProjDesc>
+            <ProjBody>
+                <ProjPageTitle>page title</ProjPageTitle>
+                <ProjPageImgBox>
+                    <StyledPageDetailImg alt="temp pic" src="img/6.jpg" />
+                </ProjPageImgBox>
+                <ProjPageDesc>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu tortor odio. Morbi iaculis ligula vel accumsan lobortis.</ProjPageDesc>
+            </ProjBody>
         </StyledPage>
     )
 }
@@ -69,4 +71,31 @@ const ProjInfo = styled.span`
     padding: 0 0.4rem;
     display: flex;
     align-items: center;
+`
+const ProjDesc = styled.div`
+    border: 1px solid magenta;
+    text-align: left;
+`
+const ProjBody = styled.div`
+    border: 1px solid magenta;
+    text-align: left;
+`
+const ProjPageTitle = styled.div`
+    border: 1px solid cyan;
+    font-size: 2rem;
+    font-weight: bold;
+`
+const ProjPageImgBox = styled.div`
+    border: 1px solid cyan;
+    overflow: hidden;
+`
+const StyledPageDetailImg = styled.img`
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+`
+const ProjPageDesc = styled.div`
+    border: 1px solid cyan;
+
 `

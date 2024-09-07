@@ -39,7 +39,7 @@ const Home = () => {
                 </h1>
             </StyledHello>
             <StyledHomePicBox>
-                <StyledHomePic alt="temp pic" src="img/temppic.jpg" />
+                <StyledHomePic alt="temp pic" src="img/8.jpg" />
             </StyledHomePicBox>
             <StyledPrsnInfo>
                 <h2>Personal Information</h2>
