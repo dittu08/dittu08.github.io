@@ -23,7 +23,7 @@ const ProjDetail = () => {
             <ProjBody>
                 <ProjPageTitle>page title</ProjPageTitle>
                 <ProjPageImgBox>
-                    <StyledPageDetailImg alt="temp pic" src="img/6.jpg" />
+                    <StyledPageDetailImg alt="6 pic" src="img/6.jpg" />
                 </ProjPageImgBox>
                 <ProjPageDesc>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu tortor odio. Morbi iaculis ligula vel accumsan lobortis.</ProjPageDesc>
             </ProjBody>

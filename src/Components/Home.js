@@ -23,10 +23,12 @@ const TypedJs = ({ strings }) => {
 }
 
 const ProfileLink = ({ href, children }) => {
-    <StyledHomeLink href={href} target="_blank" rel="noopener noreferrer">
+    return (
+      <StyledHomeLink href={href} target="_blank" rel="noopener noreferrer">
         {children}
-    </StyledHomeLink>
-}
+      </StyledHomeLink>
+    );
+  };
 
 const Home = () => {
     return (
@@ -39,7 +41,7 @@ const Home = () => {
                 </h1>
             </StyledHello>
             <StyledHomePicBox>
-                <StyledHomePic alt="temp pic" src="img/8.jpg" />
+                <StyledHomePic alt="8 pic" src="img/8.jpg" />
             </StyledHomePicBox>
             <StyledPrsnInfo>
                 <h2>Personal Information</h2>
