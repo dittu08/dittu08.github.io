@@ -24,12 +24,14 @@ const Projects = () => {
 export default Projects;
 
 const ProjBox = styled.div`
-    border: 1px solid magenta;
+    /* border: 1px solid magenta; */
+    border: 1px solid black;
     display: flex;
     width: 20rem;
 `
 const ProjLogo = styled.div`
-    border: 1px solid cyan;
+    /* border: 1px solid cyan; */
+    border: 1px solid black;
     min-width: 7rem;
 `
 const ProjDesc = styled.div`

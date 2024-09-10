@@ -73,21 +73,23 @@ const ProjInfo = styled.span`
     align-items: center;
 `
 const ProjDesc = styled.div`
-    border: 1px solid magenta;
+    /* border: 1px solid magenta; */
     text-align: left;
 `
 const ProjBody = styled.div`
-    border: 1px solid magenta;
+    /* border: 1px solid magenta; */
     text-align: left;
 `
 const ProjPageTitle = styled.div`
-    border: 1px solid cyan;
+    /* border: 1px solid cyan; */
     font-size: 2rem;
     font-weight: bold;
 `
 const ProjPageImgBox = styled.div`
-    border: 1px solid cyan;
+    /* border: 1px solid cyan; */
     overflow: hidden;
+    width: 20rem;
+    height: 15rem;
 `
 const StyledPageDetailImg = styled.img`
     width: 100%;
@@ -96,6 +98,6 @@ const StyledPageDetailImg = styled.img`
     object-position: center;
 `
 const ProjPageDesc = styled.div`
-    border: 1px solid cyan;
+    /* border: 1px solid cyan; */
 
 `

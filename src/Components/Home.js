@@ -67,6 +67,8 @@ const Home = () => {
 }
 
 // 576 768 992 1200 1400
+// anchor scroll
+// responsive web
 
 const StyledHomePicBox = styled.div`
     width: 20rem;
